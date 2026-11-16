@@ -16,7 +16,9 @@ My independent AI video analytics project explores how organizations can turn ca
 
 **Development workflow:** I configure and coordinate specialized Claude Code subagents to collaborate on engineering tasks in a structured workflow using local Git and PowerShell.
 
-**Public portfolio demo:** [Explore the marketing page and customer camera workspace](https://github.com/IdanTurj/IdanTurj/blob/main/docs/index.html)
+**Portfolio UI prototype (source code):** [View the landing-page concept and sample customer workspace](https://github.com/IdanTurj/IdanTurj/blob/main/docs/index.html)
+
+**Project status:** The original product landing page is still being developed. There is **no launched public website or live customer portal**. This GitHub file is a separate, static frontend portfolio prototype, not the official product website.
 
 This standalone **frontend demonstration** includes a landing-page concept, customer dashboard, site selection, camera placeholders, incident list, and permissions overview. The demo uses **synthetic data only**: no real footage, API access, credentials, customer records, or production source code. It demonstrates UI/product-development skills, rather than claiming that the static demo runs the private AI backend.
 
