@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#091321">
+  <meta name="description" content="A privacy-safe portfolio demonstration of an AI video analytics product's landing page and customer portal. No live cameras or production services.">
+  <title>Video Intelligence | Software Engineering Portfolio</title>
+  <style>
+    :root{color-scheme:dark;--bg:#091321;--panel:#101e30;--panel2:#13243a;--border:#29415c;--ink:#eaf4ff;--muted:#a2b8cc;--teal:#59e3ce;--blue:#80b7ff;--amber:#f2c477;--red:#f3a1a1;--radius:18px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 85% -8%,#1b3856 0,transparent 38%),linear-gradient(180deg,#0a1525,#07111e);font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);line-height:1.5;min-height:100vh}button,select{font:inherit}
+    button{cursor:pointer}button:focus-visible,a:focus-visible,select:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+    a{color:var(--teal)}.wrap{max-width:1210px;margin:auto;padding:0 26px}.hidden{display:none!important}
+    .top{position:sticky;top:0;z-index:20;background:#091321e8;backdrop-filter:blur(18px);border-bottom:1px solid #28415b}.top-inner{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:12px;color:var(--ink);text-decoration:none}.brand-mark{display:grid;place-items:center;width:39px;height:39px;border:1px solid #4bc3be;border-radius:12px;background:linear-gradient(145deg,#1b535b,#12253f);color:#a9fff2;font-size:15px;font-weight:800;letter-spacing:-1px}.brand strong{display:block;font-size:14px;letter-spacing:.03em}.brand small{display:block;font-size:11px;color:var(--muted)}
+    .nav{display:flex;flex-wrap:wrap;gap:5px;background:#142238;padding:5px;border:1px solid #2b445e;border-radius:13px}.nav button{border:0;background:transparent;color:#b8cce0;border-radius:9px;padding:10px 15px;font-size:12px;font-weight:650}.nav button.active,.nav button:hover{color:#071620;background:var(--teal)}
+    .notice{border-bottom:1px solid #1f3650;background:#0b1b2e;padding:10px 0;color:#b3d4e4;font-size:12px}.notice span{color:var(--teal);font-weight:750}
+    .eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:11px;color:var(--teal);font-weight:800}.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center;padding:80px 0 62px}
+    h1{font-size:clamp(36px,4.9vw,66px);line-height:1.08;letter-spacing:-.05em;margin:14px 0 23px}h1 em{font-style:normal;color:var(--teal)}.hero p{max-width:540px;font-size:17px;color:#b7cbdc;margin:0 0 28px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px}.button{border:1px solid #36546d;border-radius:11px;padding:12px 18px;background:#15293f;color:#ecf7ff;font-weight:750;font-size:13px}.button.primary{background:var(--teal);border-color:var(--teal);color:#081923}.button:hover{transform:translateY(-1px);filter:brightness(1.06)}
+    .hero-panel{border:1px solid #315372;background:linear-gradient(160deg,#16354c,#0f1d31);padding:16px;border-radius:25px;box-shadow:0 28px 70px #0005;transform:rotate(1deg)}.hero-panel header,.mini-header{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#b7cbe0;font-size:12px}.dots{display:flex;gap:5px}.dots i{width:6px;height:6px;background:#5a89a8;border-radius:50%}
+    .visual-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:12px;margin-top:15px}.mock-view{min-height:228px;border:1px solid #416076;border-radius:15px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 30% 34%,#23485a,#0c1a2e 75%);position:relative;overflow:hidden}.mock-view:before{content:"";position:absolute;inset:14px;border:1px dashed #456b7a65;border-radius:12px}.mock-view svg{opacity:.8}.feed-text{position:absolute;bottom:23px;text-align:center;font-size:10px;color:#a9d0d4;letter-spacing:.06em}.floating-label{position:absolute;top:14px;left:14px;color:#8ae8d8;font-size:10px;font-weight:800}.stats-stack{display:grid;gap:10px}.tiny-card{border:1px solid #35516b;border-radius:13px;padding:17px;background:#11263b}.tiny-card small{display:block;color:#a7c2d4;font-size:11px}.tiny-card strong{display:block;font-size:24px;margin-top:5px}.tiny-card .sample{font-size:9px;color:#8ee0cf}.no-live{font-size:11px;display:flex;align-items:center;gap:7px;color:#bfd0e0;margin:15px 0 1px}.dot{display:inline-block;width:7px;height:7px;background:#f3bf73;border-radius:50%}
+    .section{padding:28px 0 55px}.section-heading{font-size:29px;margin:7px 0 12px;letter-spacing:-.035em}.section-intro{color:var(--muted);max-width:750px;font-size:14px}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}.feature{border:1px solid var(--border);background:linear-gradient(160deg,#14283d,#0c1b2d);border-radius:17px;padding:26px}.feature b{font-size:16px}.feature p{font-size:13px;color:#acc2d3}.feature .symbol{display:grid;place-items:center;width:41px;height:41px;background:#143c4a;border-radius:12px;font-size:20px;color:var(--teal);margin-bottom:19px}
+    .workflow{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}.step{border-left:2px solid #50cbb9;padding:9px 18px}.step small{color:var(--teal);font-weight:800}.step strong{display:block;margin:4px 0}.step p{font-size:12px;color:var(--muted);margin:0}
+    .portal{padding:36px 0 70px}.portal-intro{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:22px}.portal-intro h1{font-size:33px;letter-spacing:-.04em;margin:7px 0}.portal-intro p{color:var(--muted);margin:0;font-size:13px}.demo-pill{font-size:11px;padding:8px 12px;border:1px solid #437477;border-radius:99px;background:#103036;color:#a4f4e7;white-space:nowrap}
+    .workspace{display:grid;grid-template-columns:215px minmax(0,1fr);border:1px solid #2d4660;border-radius:22px;overflow:hidden;box-shadow:0 20px 70px #0004;background:#0c192a;min-height:600px}
+    .sidebar{background:#101f31;border-right:1px solid #2e445c;padding:24px 14px}.side-brand{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:#85d7cd;font-weight:800;padding:3px 12px 23px}.side-label{color:#698ba5;font-size:10px;font-weight:800;padding:12px}.side-nav{display:grid;gap:5px}.side-nav button{border:1px solid transparent;text-align:left;color:#acc6d9;background:transparent;padding:12px;border-radius:10px;font-size:12px}.side-nav button.current{color:#9cfbe9;background:#17404d;border-color:#356778}.side-nav button:hover{background:#17344a}.side-bottom{font-size:10px;color:#7896b0;margin:35px 12px 0}
+    .content{padding:27px;min-width:0}.workspace-title{display:flex;align-items:center;justify-content:space-between;gap:15px}.workspace-title h2{margin:0 0 5px;font-size:21px}.workspace-title p{margin:0;color:var(--muted);font-size:12px}.site-select{background:#182e44;color:#e5f8ff;border:1px solid #3b5d74;border-radius:10px;padding:10px;max-width:220px}
+    .metric-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:22px 0}.metric{background:#11243a;border:1px solid #314c64;border-radius:13px;padding:18px}.metric span{display:block;font-size:11px;color:#9fb9cb}.metric b{display:block;font-size:29px;letter-spacing:-.04em;margin-top:4px}.metric small{color:#78d7c7;font-size:10px}
+    .subhead{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:25px 0 12px}.subhead h3{margin:0;font-size:15px}.subhead small{font-size:11px;color:var(--muted)}
+    .camera-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.camera{background:#11233a;border:1px solid #2f4b62;border-radius:14px;overflow:hidden}.camera-frame{aspect-ratio:16/9;background:repeating-linear-gradient(0deg,#142b3e,#142b3e 1px,#132639 1px,#132639 30px);display:grid;place-items:center;position:relative}.camera-frame:after{content:"";position:absolute;inset:12px;border:1px dashed #486478;border-radius:12px;pointer-events:none}.camera-placeholder{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;padding:20px}.camera-placeholder svg{opacity:.7}.camera-placeholder b{font-size:11px}.camera-placeholder small{color:#829fb3;font-size:10px}.camera-meta{display:flex;justify-content:space-between;align-items:center;gap:6px;padding:12px 14px;font-size:11px}.camera-meta strong{font-size:12px}.status{font-size:10px;color:#8ee8d5}
+    .events{display:grid;gap:9px}.event{display:flex;justify-content:space-between;gap:13px;align-items:center;background:#11243a;border:1px solid #304b64;border-radius:12px;padding:15px 17px}.event b{font-size:12px}.event small{display:block;color:#8caec4;margin-top:4px;font-size:11px}.chip{border-radius:99px;padding:5px 9px;font-size:10px;white-space:nowrap;border:1px solid #477568;color:#a4f6ce}.chip.amber{border-color:#8e6644;color:#ffd49b}.chip.blue{border-color:#45699b;color:#c1d9ff}
+    .access-list{display:grid;gap:12px}.access{padding:18px;border-radius:13px;background:#12263b;border:1px solid #2e5168}.access strong{display:block;font-size:13px}.access p{color:#a7bfd0;margin:6px 0 0;font-size:12px}
+    .note-card{margin-top:24px;padding:15px 18px;background:#0b2d35;border:1px solid #265e66;border-radius:12px;color:#b7e6e3;font-size:12px}
+    .tech-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px;margin:27px 0}.tech-card{border:1px solid #2f4c65;border-radius:16px;background:#112337;padding:24px}.tech-card h3{margin:0 0 10px}.tech-card p{color:var(--muted);font-size:13px}.pills{display:flex;gap:7px;flex-wrap:wrap}.pills span{padding:6px 9px;border:1px solid #3b5b71;background:#193149;color:#b0d4e7;border-radius:8px;font-size:11px}
+    .disclaimer{background:#2b271d;border:1px solid #675334;color:#f2d5a4;padding:17px 20px;border-radius:13px;font-size:12px;margin-top:16px}
+    footer{border-top:1px solid #253b53;padding:28px 0 40px;color:#86a6bd;font-size:12px}footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    @media(max-width:960px){.hero{grid-template-columns:1fr}.features{grid-template-columns:1fr 1fr}.workflow{grid-template-columns:1fr}.workspace{grid-template-columns:155px minmax(0,1fr)}.sidebar{padding:18px 9px}.content{padding:18px}}
+    @media(max-width:660px){.wrap{padding:0 15px}.top-inner{flex-direction:column;align-items:stretch;padding:14px 0}.nav{justify-content:center}.nav button{flex:1;padding:9px 7px;font-size:11px}.hero{padding:44px 0}.features,.tech-grid,.camera-grid{grid-template-columns:1fr}.visual-grid{grid-template-columns:1fr}.stats-stack{grid-template-columns:repeat(2,1fr)}.hero-panel{transform:none}.portal-intro{align-items:flex-start;flex-direction:column}.workspace{display:block}.sidebar{border-right:0;border-bottom:1px solid #2e445c;padding:13px}.side-brand,.side-label,.side-bottom{display:none}.side-nav{display:flex;overflow-x:auto}.side-nav button{flex-shrink:0}.workspace-title{align-items:stretch;flex-direction:column}.site-select{max-width:none}.metric-grid{grid-template-columns:1fr 1fr}.metric:last-child{grid-column:span 2}h1{font-size:36px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button:hover{transform:none}}
+  </style>
+</head>
+<body>
+  <header class="top"><div class="wrap top-inner">
+    <a class="brand" href="#landing" data-view="landing" aria-label="Video Intelligence portfolio home"><span class="brand-mark">VI</span><span><strong>VIDEO INTELLIGENCE</strong><small>Software engineering portfolio</small></span></a>
+    <nav class="nav" aria-label="Demo sections">
+      <button class="active" type="button" data-view="landing" aria-pressed="true">Public website</button>
+      <button type="button" data-view="portal" aria-pressed="false">Customer portal</button>
+      <button type="button" data-view="engineering" aria-pressed="false">Engineering notes</button>
+    </nav>
+  </div></header>
+  <div class="notice"><div class="wrap"><span>PORTFOLIO DEMONSTRATION</span> — Recreated public-facing UI, synthetic information, no real video streams or customer data.</div></div>
+  <main class="wrap">
+    <section id="landing" aria-label="Marketing landing page demonstration">
+      <div class="hero">
+        <div>
+          <div class="eyebrow">AI-powered video analytics · Product experience</div>
+          <h1>See what matters.<br><em>Review what happened.</em></h1>
+          <p>A concept-to-interface demonstration of a software platform that helps organizations turn video events into actionable incident information, using their existing compatible cameras.</p>
+          <div class="actions"><button type="button" class="button primary" data-view="portal">Explore the client portal</button><button type="button" class="button" data-view="engineering">Explore the engineering</button></div>
+        </div>
+        <div class="hero-panel" role="img" aria-label="Stylized non-functional video analytics product preview with no video feed">
+          <header><strong>Site monitoring overview</strong><span class="dots"><i></i><i></i><i></i></span></header>
+          <div class="visual-grid">
+            <div class="mock-view"><span class="floating-label">VIDEO PLACEHOLDER</span>
+              <svg width="92" height="80" viewBox="0 0 92 80" fill="none" aria-hidden="true"><rect x="10" y="12" width="66" height="47" rx="10" stroke="#75cbbf" stroke-width="2"/><path d="M76 28L88 23V48L76 43M33 66H56M45 59V66" stroke="#75cbbf" stroke-width="2" stroke-linecap="round"/><path d="M22 48L35 35L45 44L57 28L66 39" stroke="#75cbbf" stroke-width="2" opacity=".65"/></svg>
+              <span class="feed-text">No footage included in public portfolio</span>
+            </div>
+            <div class="stats-stack">
+              <div class="tiny-card"><small>Managed sites</small><strong>02</strong><span class="sample">Sample interface data</span></div>
+              <div class="tiny-card"><small>Incident review</small><strong>03</strong><span class="sample">Example events only</span></div>
+            </div>
+          </div>
+          <div class="no-live"><span class="dot"></span> Preview has no camera, API, or authentication connection</div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="eyebrow">Product capabilities</div><h2 class="section-heading">Built around events, sites, and access.</h2>
+        <p class="section-intro">This safe public demonstration communicates the workflows of a privately developed AI video analytics application. Its production implementation is not published here.</p>
+        <div class="features">
+          <article class="feature"><span class="symbol">◎</span><b>Event-driven monitoring</b><p>Security rules such as tripwires, restricted areas, and scheduled monitoring help surface incidents for review.</p></article>
+          <article class="feature"><span class="symbol">⌘</span><b>Customer-centered workspace</b><p>Organized access to camera lists, incidents, site context, permissions, and account settings.</p></article>
+          <article class="feature"><span class="symbol">▣</span><b>Evidence and review</b><p>Incident metadata and associated evidence help users understand alerts without scanning continuous footage.</p></article>
+        </div>
+      </div>
+      <div class="section">
+        <div class="eyebrow">User journey</div><h2 class="section-heading">From setup to response.</h2>
+        <div class="workflow">
+          <div class="step"><small>01</small><strong>Configure a site</strong><p>Organize authorized cameras and assign them to a customer workspace.</p></div>
+          <div class="step"><small>02</small><strong>Define monitoring rules</strong><p>Configure areas and schedules appropriate to the site.</p></div>
+          <div class="step"><small>03</small><strong>Review an incident</strong><p>Use alerts and evidence metadata to understand what triggered a rule.</p></div>
+        </div>
+      </div>
+    </section>
+    <section id="portal" class="portal hidden" aria-label="Customer portal demonstration">
+      <div class="portal-intro">
+        <div><div class="eyebrow">Customer interface</div><h1>Client workspace</h1><p>A non-functional UI demo of the customer experience. Every value below is synthetic.</p></div>
+        <div class="demo-pill">● Sandbox UI · No live feeds</div>
+      </div>
+      <div class="workspace">
+        <aside class="sidebar">
+          <div class="side-brand">Customer Portal</div><div class="side-label">WORKSPACE</div>
+          <div class="side-nav" aria-label="Customer portal pages">
+            <button class="current" type="button" data-panel="overview">◈ &nbsp; Overview</button>
+            <button type="button" data-panel="cameras">▣ &nbsp; Cameras</button>
+            <button type="button" data-panel="incidents">◉ &nbsp; Incidents</button>
+            <button type="button" data-panel="permissions">♢ &nbsp; Permissions</button>
+          </div><div class="side-bottom">Demo organization<br>No account connection</div>
+        </aside>
+        <div class="content">
+          <div class="workspace-title">
+            <div><h2 id="panel-title">Overview</h2><p>Customer-only monitoring workspace · Portfolio mock data</p></div>
+            <select class="site-select" id="siteSelect" aria-label="Choose demo site"><option value="alpha">Demo Site Alpha</option><option value="beta">Demo Site Beta</option></select>
+          </div>
+          <div class="metric-grid">
+            <div class="metric"><span>Configured cameras</span><b id="metricCameras">04</b><small>Demo configuration</small></div>
+            <div class="metric"><span>Reviewable incidents</span><b id="metricIncidents">03</b><small>Sample events</small></div>
+            <div class="metric"><span>Selected site</span><b id="metricSite">A</b><small>Synthetic location</small></div>
+          </div>
+          <div id="panel-overview">
+            <div class="subhead"><h3>Camera overview</h3><small>Images deliberately removed</small></div><div class="camera-grid" id="overviewCameras"></div>
+            <div class="subhead"><h3>Recent incidents</h3><small>Illustrative alerts</small></div><div class="events" id="overviewEvents"></div>
+          </div>
+          <div id="panel-cameras" class="hidden">
+            <div class="subhead"><h3>Site cameras</h3><small>Camera cards show layout only</small></div><div class="camera-grid" id="allCameras"></div>
+            <div class="note-card">The actual product connects only to authorized IP cameras. This portfolio site has no video player, live endpoint, or stored footage.</div>
+          </div>
+          <div id="panel-incidents" class="hidden">
+            <div class="subhead"><h3>Incident center</h3><small>Static examples of an event history</small></div><div class="events" id="allEvents"></div>
+            <div class="note-card">The full application supports event handling and saved evidence. No real snapshots, clips, identities, or customer information are included in this demo.</div>
+          </div>
+          <div id="panel-permissions" class="hidden">
+            <div class="subhead"><h3>Role-based access</h3><small>Design illustration — not real authentication</small></div>
+            <div class="access-list">
+              <div class="access"><strong>Customer Manager</strong><p>Customer-scoped site and user management, incident access, and configured approvals.</p></div>
+              <div class="access"><strong>Customer Operator</strong><p>Restricted access to assigned customer information and security incident review.</p></div>
+              <div class="access"><strong>Platform Support</strong><p>Operational support without default access to private customer live camera feeds.</p></div>
+            </div>
+            <div class="note-card">In the real backend, access controls are enforced server-side. These visible examples are UI only.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="engineering" class="section hidden" aria-label="Engineering overview">
+      <div class="eyebrow">Engineering case study</div><h1 style="font-size:42px">What I built.<br><em>How the pieces fit.</em></h1>
+      <p class="section-intro">The complete application is a private software project combining video inference, a Python backend, customer-facing web UI, security rules, and incident management. This repository publishes only an independent frontend demonstration.</p>
+      <div class="tech-grid">
+        <article class="tech-card"><h3>Computer vision</h3><p>Real-time object detection and tracking for security-event workflows, using existing authorized IP camera sources.</p><div class="pills"><span>Python</span><span>Ultralytics YOLOv8</span><span>PyTorch</span><span>OpenCV</span><span>NumPy</span></div></article>
+        <article class="tech-card"><h3>Backend & security</h3><p>APIs for camera and site management, incidents, user roles, and encrypted camera credentials; account-level authentication features.</p><div class="pills"><span>FastAPI</span><span>Pydantic</span><span>SQLite</span><span>RBAC</span><span>MFA</span></div></article>
+        <article class="tech-card"><h3>Customer-facing UI</h3><p>Browser interfaces for site overview, camera management, incident review, permissions, and request workflows.</p><div class="pills"><span>JavaScript</span><span>HTML</span><span>CSS</span><span>Responsive UI</span></div></article>
+        <article class="tech-card"><h3>AI-assisted development</h3><p>Structured Claude Code subagent workflows with specialized responsibilities and coordinated engineering tasks across a shared codebase.</p><div class="pills"><span>Claude Code</span><span>Multi-agent orchestration</span><span>Git</span><span>PowerShell</span></div></article>
+      </div>
+      <div class="disclaimer"><strong>Privacy and scope:</strong> This website does not implement actual camera connectivity, computer vision inference, customer authentication, database access, AI-agent execution, or production security controls. The visualized values are examples. Private implementation code is not included.</div>
+    </section>
+  </main>
+  <footer><div class="wrap"><span>Independent development portfolio · Idan Turjeman</span><span>Public-safe UI demonstration · No customer or camera data</span></div></footer>
+  <script>
+    (function(){
+      var names={landing:'Public website',portal:'Customer portal',engineering:'Engineering notes'};
+      function showView(name){
+        if(!names[name])name='landing';
+        Object.keys(names).forEach(function(k){document.getElementById(k).classList.toggle('hidden',k!==name);});
+        document.querySelectorAll('[data-view]').forEach(function(el){var yes=el.getAttribute('data-view')===name;el.classList.toggle('active',yes);if(el.tagName==='BUTTON')el.setAttribute('aria-pressed',String(yes));});
+        window.location.hash=name;window.scrollTo({top:0,behavior:'smooth'});
+      }
+      document.querySelectorAll('[data-view]').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();showView(b.getAttribute('data-view'));});});
+      var sites={alpha:{code:'A',cameras:['Entrance','North Perimeter','Loading Zone','Office Exterior'],events:[['Restricted-area event','Example · 09:42','amber','Review'],['After-hours activity','Example · 08:15','blue','Info'],['Camera health update','Example · Yesterday','', 'Resolved']]},beta:{code:'B',cameras:['Gate','Storage Exterior'],events:[['Tripwire event','Example · 11:20','amber','Review'],['Camera health update','Example · Yesterday','', 'Resolved']]}};
+      var cameraIcon='<svg width="51" height="42" viewBox="0 0 51 42" fill="none" aria-hidden="true"><rect x="4" y="7" width="36" height="27" rx="5" stroke="#8cbdca" stroke-width="2"/><path d="M40 15L48 11V29L40 25" stroke="#8cbdca" stroke-width="2"/><path d="M17 19h10M22 14v10" stroke="#8cbdca" stroke-width="1.5"/></svg>';
+      function cameraHtml(name){return '<div class="camera"><div class="camera-frame"><div class="camera-placeholder">'+cameraIcon+'<b>Camera view withheld</b><small>No video or image data in portfolio</small></div></div><div class="camera-meta"><strong>'+name+'</strong><span class="status">Demo camera</span></div></div>';}
+      function eventHtml(row){return '<div class="event"><div><b>'+row[0]+'</b><small>'+row[1]+'</small></div><span class="chip '+row[2]+'">'+row[3]+'</span></div>';}
+      function refresh(){var d=sites[document.getElementById('siteSelect').value];document.getElementById('metricCameras').textContent=String(d.cameras.length).padStart(2,'0');document.getElementById('metricIncidents').textContent=String(d.events.length).padStart(2,'0');document.getElementById('metricSite').textContent=d.code;document.getElementById('overviewCameras').innerHTML=d.cameras.slice(0,2).map(cameraHtml).join('');document.getElementById('allCameras').innerHTML=d.cameras.map(cameraHtml).join('');document.getElementById('overviewEvents').innerHTML=d.events.slice(0,2).map(eventHtml).join('');document.getElementById('allEvents').innerHTML=d.events.map(eventHtml).join('');}
+      document.getElementById('siteSelect').addEventListener('change',refresh);refresh();
+      var titles={overview:'Overview',cameras:'Cameras',incidents:'Incident center',permissions:'Permissions'};
+      document.querySelectorAll('[data-panel]').forEach(function(b){b.addEventListener('click',function(){var name=b.getAttribute('data-panel');Object.keys(titles).forEach(function(n){document.getElementById('panel-'+n).classList.toggle('hidden',n!==name);});document.querySelectorAll('[data-panel]').forEach(function(x){x.classList.toggle('current',x===b);});document.getElementById('panel-title').textContent=titles[name];});});
+      var initial=window.location.hash.replace('#','');if(names[initial])showView(initial);
+    })();
+  </script>
+</body>
+</html>
