@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#091321">
-  <meta name="description" content="A privacy-safe portfolio demonstration of an AI video analytics product's landing page and customer portal. No live cameras or production services.">
+  <meta name="description" content="A static portfolio UI concept. Original product landing page is in development; no live website, cameras, or production services.">
   <title>Video Intelligence | Software Engineering Portfolio</title>
   <style>
     :root{color-scheme:dark;--bg:#091321;--panel:#101e30;--panel2:#13243a;--border:#29415c;--ink:#eaf4ff;--muted:#a2b8cc;--teal:#59e3ce;--blue:#80b7ff;--amber:#f2c477;--red:#f3a1a1;--radius:18px}
@@ -44,12 +44,12 @@
   <header class="top"><div class="wrap top-inner">
     <a class="brand" href="#landing" data-view="landing" aria-label="Video Intelligence portfolio home"><span class="brand-mark">VI</span><span><strong>VIDEO INTELLIGENCE</strong><small>Software engineering portfolio</small></span></a>
     <nav class="nav" aria-label="Demo sections">
-      <button class="active" type="button" data-view="landing" aria-pressed="true">Public website</button>
+      <button class="active" type="button" data-view="landing" aria-pressed="true">Landing page concept</button>
       <button type="button" data-view="portal" aria-pressed="false">Customer portal</button>
       <button type="button" data-view="engineering" aria-pressed="false">Engineering notes</button>
     </nav>
   </div></header>
-  <div class="notice"><div class="wrap"><span>PORTFOLIO DEMONSTRATION</span> — Recreated public-facing UI, synthetic information, no real video streams or customer data.</div></div>
+  <div class="notice"><div class="wrap"><span>UI PORTFOLIO PROTOTYPE</span> — Original product landing page still in development. No launched product website, real video streams, or customer data.</div></div>
   <main class="wrap">
     <section id="landing" aria-label="Marketing landing page demonstration">
       <div class="hero">
@@ -156,7 +156,7 @@
   <footer><div class="wrap"><span>Independent development portfolio · Idan Turjeman</span><span>Public-safe UI demonstration · No customer or camera data</span></div></footer>
   <script>
     (function(){
-      var names={landing:'Public website',portal:'Customer portal',engineering:'Engineering notes'};
+      var names={landing:'Landing page concept',portal:'Customer UI concept',engineering:'Engineering notes'};
       function showView(name){
         if(!names[name])name='landing';
         Object.keys(names).forEach(function(k){document.getElementById(k).classList.toggle('hidden',k!==name);});
